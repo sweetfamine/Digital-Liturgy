@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DATA FETISH · Ritual of Observation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HERO / EYE -->
+  <header id="hero">
+    <canvas id="eye-canvas" aria-hidden="true"></canvas>
+    <div class="hero-content">
+      <p class="hero-kicker">data fetish • web ritual</p>
+      <h1>“You think I see you.<br>But I only see what you give me.”</h1>
+      <p class="hero-sub">
+        A visual meditation on surveillance, digital intimacy and the worship of data.
+      </p>
+      <a href="#data-section" class="hero-scroll">scroll to reveal ↓</a>
+    </div>
+  </header>
+
+  <!-- DATA SECTION -->
+  <main>
+    <section id="data-section" class="section section-light">
+      <div class="section-header">
+        <h2>Your exposed layer</h2>
+        <p>
+          This browser session already gives away basic metadata. No password, no cookie, no confession —
+          yet a shape of you appears.
+        </p>
+      </div>
+
+      <div id="data-grid" class="data-grid">
+        <!-- Sauron -->
+      </div>
+
+      <div class="viz-wrap">
+        <h3>Structural reading</h3>
+        <p class="small">
+          The chart below is an artistic representation of how “thick” the current metadata is.
+          It does not store or send your values.
+        </p>
+        <canvas id="data-viz" width="800" height="220"></canvas>
+      </div>
+    </section>
+
+    <!-- WHY DID I DO THIS? -->
+    <section id="explanation" class="section section-mid">
+      <div class="section-header">
+        <h2>Doctrine of the observing machine</h2>
+        <p>
+          Modern interfaces do not ask — they infer. They praise data as if it were revelation.
+          This project turns that silent extraction into a liturgy you can actually see.
+        </p>
+      </div>
+      <div class="two-col">
+        <div>
+          <h3>What we read (client-side)</h3>
+          <ul>
+            <li>Navigator data (browser, platform, language)</li>
+            <li>Viewport &amp; screen size</li>
+            <li>Time zone</li>
+            <li>Basic capability hints (device memory, cores)</li>
+            <li>Interaction signals (clicks, moves)</li>
+          </ul>
+          <p class="small">
+            In a real surveillance stack, this would be combined with IP, cookies, login IDs and 3rd party scripts
+            to build a recognizable fingerprint.
+          </p>
+        </div>
+        <div>
+          <h3>What we do <em>not</em> do</h3>
+          <ul>
+            <li>No server calls</li>
+            <li>No cookies</li>
+            <li>No storage</li>
+            <li>No hidden trackers</li>
+          </ul>
+          <p class="small">
+            The artwork is deliberately harmless — to highlight that even harmless data feels intimate
+            once it is made visible.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOWER PARTS OF THE SIDE-->
+    <section id="descent" class="section section-dark">
+      <div class="section-header">
+        <h2>From reverence to obsession</h2>
+        <p>
+          Scrolls in sacred halls turn to iron gates.  
+          Data, once worshipped, becomes discipline.
+        </p>
+      </div>
+      <div class="gothic-block">
+        <p>
+          Data is power because it predicts.  
+          Prediction is control because it anticipates desire.  
+          Desire is leverage because it makes bodies compliant.
+        </p>
+        <p class="small">
+          If you host this on your own server, you could log each session here.  
+          That single change would turn contemplation into extraction.
+        </p>
+        <pre class="code-block">
+// example (disabled):
+// fetch('/collect', { method: 'POST', body: JSON.stringify(window.__DF_META__) })
+        </pre>
+        <p class="foot">
+          You think I see you.  
+          But I only see what you give me.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
